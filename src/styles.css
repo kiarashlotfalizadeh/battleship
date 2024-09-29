@@ -1,0 +1,148 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+/* Dialog Style */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  text-align: center;
+}
+
+dialog.game-setup {
+  width: 400px;
+}
+
+.dialog-gameboard {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 4px;
+  margin: 20px 0;
+}
+
+/* Grid Styling */
+.dialog-grid,
+.player-grid,
+.computer-grid {
+  width: 30px;
+  height: 30px;
+  background-color: #b0c4de;
+  border: 1px solid #4f5d75;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.dialog-grid:hover,
+.player-grid:hover,
+.computer-grid:hover {
+  background-color: #8fbcd4;
+  cursor: pointer;
+}
+
+/* Player & Computer Board */
+.player-gameboard,
+.computer-gameboard {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.player-grid,
+.computer-grid {
+  width: 40px;
+  height: 40px;
+  background-color: #d3d3d3;
+}
+
+/* Gameboard Titles */
+.gameboard-title {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Layout for Top and Bottom Halves */
+.top-half,
+.bottom-half {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.left-quarter,
+.right-quarter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-game {
+  background-color: #e74c3c;
+}
+
+.new-game:hover {
+  background-color: #c0392b;
+}
+
+/* Game Over Dialog */
+dialog .result {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.ship-grid {
+  background-color: black;
+}
+
+.damaged-grid {
+  background-color: red;
+}
+
+.missed-grid {
+  background-color: blue;
+}

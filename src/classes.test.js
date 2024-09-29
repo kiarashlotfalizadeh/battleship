@@ -78,3 +78,15 @@ describe('Gameboard', () => {
     expect(gameboard.allShipsSunk()).toBe(true);
   });
 });
+
+import { extractCoordinates } from './functions';
+
+describe('extractCoordinates', () => {
+  test('should extract coordinates correctly from a valid string', () => {
+    const inputString = '[1, 2] dialog-grid';
+    const expectedOutput = [[1, 2]];
+    expect(extractCoordinates(inputString)).toEqual(expectedOutput);
+  });
+});
+
+// Ship.test.js
